@@ -13,9 +13,7 @@ def index():
 
 @app.get("/pizzas/")
 def show_pizzas():
-    pizzas = db.get_pizzas()
-    pizza_name1 = pizzas[0]
-    pizza_name2 = pizzas[1]
+    pizzas = db.get_pizzas1()
     context = {
         "title": "Список піц",
         "pizzas": pizzas
@@ -37,4 +35,4 @@ def add_pizza_post():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+   app.run(debug=True)
